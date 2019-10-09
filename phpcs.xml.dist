@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<ruleset name="wp-hook-analyser standard" namespace="NdB">
+    <file>./src</file>
+    <file>./bin/wp-hook-analyser</file>
+    <exclude-pattern>*/vendor/*</exclude-pattern>
+    <rule ref="PSR2"/>
+</ruleset>

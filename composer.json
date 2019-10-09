@@ -1,0 +1,40 @@
+{
+    "name": "niels-de-blaauw/pwp-hook-analyser",
+    "description": "Static analysis tool graphing WordPress action and filter usage.",
+    "type": "library",
+    "require": {
+        "nikic/php-parser": "^4.2"
+    },
+    "require-dev": {
+        "phpstan/phpstan": "^0.11.16",
+        "squizlabs/php_codesniffer": "^3.5"
+    },
+    "scripts":{
+        "test": [
+            "composer validate",
+            "vendor/bin/phpcs",
+            "vendor/bin/phpstan analyse src bin/wp-hook-analyser --level 7"
+        ],
+        "fix": [
+            "vendor/bin/phpcbf"
+        ]
+    },
+    "bin": [
+        "bin/wp-hook-analyser"
+    ],
+    "autoload": {
+        "psr-4": {
+            "NdB\\WPHookAnalyser\\": "src"
+        }
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Niels de Blaauw",
+            "email": "niels.de.blaauw@gmail.com"
+        }
+    ],
+    "config": {
+        "sort-packages": true
+    }
+}
